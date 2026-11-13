@@ -127,7 +127,7 @@ PREP_MAP = {  # English preposition -> (Mwaghavul form, fused?, suppress_ni)
 LOCATIVE_PREPS = {"at", "in", "to", "into", "near"}
 
 # Vehicle / enclosed-space nouns: "on/in the bus" means inside the vehicle, so the
-# preposition maps to n’ɣɨɨn ("inside") rather than n’kaa ("on top of").
+# preposition maps to n’ɗɨɨn ("inside") rather than n’kaa ("on top of").
 VEHICLE_NOUNS = {"bus", "car", "taxi", "train", "plane", "airplane", "lorry", "truck", "ship", "boat", "ferry"}
 
 # Temporal "ago": the GOLD elapsed-time relative clause is
@@ -579,13 +579,13 @@ class EnglishToMw:
         prep = p.lower_
         objs = [c for c in p.children if c.dep_ in ("pobj", "dobj")]
         form, fused, supp = PREP_MAP.get(prep, (None, False, False))
-        # Vehicle / enclosed-space container: "on/in the bus" -> n’ɣɨɨn ("inside")
+        # Vehicle / enclosed-space container: "on/in the bus" -> n’ɗɨɨn ("inside")
         # rather than n’kaa ("on top of").
         if form is not None and prep in ("on", "in") and objs:
             obj_text = " ".join(c.lower_ for c in objs)
             if any(w in obj_text for w in VEHICLE_NOUNS):
-                form, fused, supp = "n’ɣɨɨn", False, False
-                self.rule("vehicle container: on/in the <vehicle> -> n’ɣɨɨn", "GOLD",
+                form, fused, supp = "n’ɗɨɨn", False, False
+                self.rule("vehicle container: on/in the <vehicle> -> n’ɗɨɨn", "GOLD",
                           f"{obj_text} -> inside")
         if form is None:
             lw = self.lex_en(p, "ADP")
