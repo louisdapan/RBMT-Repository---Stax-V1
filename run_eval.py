@@ -8,11 +8,11 @@ Stages (run in this order; references stay sealed until stage 'score'):
     python run_eval.py rbmt      build the masked engine, run RBMT + tier-weighted RAG on the 15 inputs -> rbmt_packets.json
     python run_eval.py score     load zero_shot.json + hybrid.json + sealed refs -> sacrebleu chrF++ / BLEU table
 """
-import collections, hashlib, json, random, re, sys, unicodedata
+import collections, hashlib, json, os, random, re, sys, unicodedata
 from pathlib import Path
 import test_translator as T
 
-WORK = Path("/home/claude/eval"); WORK.mkdir(exist_ok=True)
+WORK = Path(os.environ.get("EVAL_WORK", "/workspace/app/eval_work")); WORK.mkdir(parents=True, exist_ok=True)
 SEAL = WORK / "sealed_refs.json"
 SEED = 20261113
 

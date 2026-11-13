@@ -89,16 +89,34 @@ CLOSED_CLASS_FORMS = sorted({wkey(v) for v in list(SUBJ_PRON.values()) + list(PO
 KINSHIP = {"mother", "father", "brother", "sister", "child", "husband", "wife", "son", "daughter", "parent"}
 
 # Permitted loanwords (English + Hausa).  LOANWORD tier sits directly above OOV.
+# Native-speaker correction: direct English loans retain STANDARD ENGLISH ORTHOGRAPHY
+# (bus, phone, charge) rather than phonetic respellings (bas, fon, caji).
 LOAN_EN2MW = {
     "car": "mota", "automobile": "mota", "vehicle": "mota", "hospital": "asibiti", "clinic": "asibiti",
-    "wire": "waya", "phone": "fon", "telephone": "fon", "cellphone": "fon", "mobile": "fon", "charge": "caji",
-    "charger": "caji", "bus": "bas", "laptop": "laptop", "table": "tebur", "chair": "kujera",
+    "wire": "waya", "phone": "phone", "telephone": "phone", "cellphone": "phone", "mobile": "phone", "smartphone": "phone",
+    "charge": "charge", "charger": "charge",
+    "bus": "bus", "laptop": "laptop", "table": "tebur", "chair": "kujera",
     "school": "makaranta", "doctor": "likita", "radio": "rediyo", "television": "tibi", "tv": "tibi",
     "computer": "kwamfuta",
 }
-LOAN_MW2EN = {"mota": "car", "asibiti": "hospital", "waya": "wire/phone", "caji": "charge", "chaaji": "charge", "bas": "bus",
-              "fon": "phone", "laptop": "laptop", "tebur": "table", "kujera": "chair", "makaranta": "school",
+LOAN_MW2EN = {"mota": "car", "asibiti": "hospital", "waya": "wire/phone", "charge": "charge", "chaaji": "charge", "bus": "bus",
+              "fon": "phone", "phone": "phone", "laptop": "laptop", "tebur": "table", "kujera": "chair", "makaranta": "school",
               "likita": "doctor", "rediyo": "radio", "tibi": "television", "kwamfuta": "computer"}
+
+# English nouns whose Mwaghavul lemma is known to the native speaker but has not yet been
+# induced into the transfer lexicon.  Bridging here prevents an unwanted NOUN_LOAN fall-through
+# (e.g. "girl" -> laareep, not the raw English token "girl").
+NOUN_BRIDGE = {"girl": "laareep", "phone": "phone", "bus": "bus", "charge": "charge"}
+
+# Electronic-device context for "charge": the native lexicon entry kurum means "to charge"
+# (a person / attack), so an electronic "charge" must use the loanword rather than kurum.
+ELEC_CHARGE_OBJECTS = {"phone", "telephone", "cellphone", "mobile", "smartphone", "battery", "charger", "cell", "ipad"}
+
+# Reflexive pronouns -> bare Mwaghavul reflexive (sut series).  Standalone reflexives map
+# directly; they NEVER take a redundant possessive pronoun (f…
+# English -> Mwaghavul reflexive mapping (native-speaker correction H02).
+REFLEX_EN2MW = {"myself": "san", "yourself": "sak", "himself": "shin", "herself": "sat",
+                "itself": "sut", "ourselves": "sut", "yourselves": "sut", "themselves": "sut"}
 
 PREP_MAP = {  # English preposition -> (Mwaghavul form, fused?, suppress_ni)
     "at": ("n’", True, True), "in": ("n’", True, True), "to": ("n’", True, True), "into": ("n’", True, True),
@@ -108,6 +126,14 @@ PREP_MAP = {  # English preposition -> (Mwaghavul form, fused?, suppress_ni)
 }
 LOCATIVE_PREPS = {"at", "in", "to", "into", "near"}
 
+# Vehicle / enclosed-space nouns: "on/in the bus" means inside the vehicle, so the
+# preposition maps to n’ɣɨɨn ("inside") rather than n’kaa ("on top of").
+VEHICLE_NOUNS = {"bus", "car", "taxi", "train", "plane", "airplane", "lorry", "truck", "ship", "boat", "ferry"}
+
+# Temporal "ago": the GOLD elapsed-time relative clause is
+#   puus ɗii-<num> ɗi ni ɗel   ("day REL-number REL it pass")
+# e.g. "two days ago" -> puus ɗii-vul ɗi ni ɗel ; "three days ago" -> puus ɗii-kun ɗi ni ɗel
+# It always sits at the clause periphery (after O and locative P), never between V and O.
 # ----------------------------------------------------------------------------- lexicon
 def clean_senses(english):
     """'to eat s.t' -> ['eat'];  'mother, old woman' -> ['mother','old woman'];  drops (..) and s.t/s.o/etc."""
@@ -332,6 +358,13 @@ class Retriever:
 CLEFT_RE = re.compile(r"^\s*it\s+(?:is|was|’s|'s)\s+(.+?)\s+(that|who|whom|which)\s+(.+?)\s*[.?!]*\s*$", re.I)
 WH_SET = {"who", "what", "where", "when", "why", "how"}
 
+def _verb_obj_text(v, ch):
+    """Direct object text of the verb v (for electronic-device 'charge' disambiguation)."""
+    for c in ch:
+        if c.dep_ == "dobj" and c.lower_ not in WH_SET:
+            return c.text
+    return ""
+
 class Seg(list):
     pass
 
@@ -349,13 +382,18 @@ class EnglishToMw:
     def flag(self, kind, text):
         self.flags.append(f"{kind}:{text}")
 
-    # ---- lexical lookup with LOANWORD / NOUN_LOAN / OOV tiers
-    def lex_en(self, tok, pos=None):
+    # ---- lexical lookup with LOANWORD / NOUN_BRIDGE / NOUN_LOAN / OOV tiers
+    def lex_en(self, tok, pos=None, obj_context=None):
         lemma = tok.lemma_.lower() if tok.pos_ != "PROPN" else tok.text
         pos = pos or tok.pos_
         if pos == "PROPN":
             self.lex_trace.append((tok.text, "PROPN", "retain"))
             return tok.text
+        # electronic-device "charge" -> loanword (native kurum = to charge a person)
+        if lemma == "charge" and obj_context and wkey(obj_context) in ELEC_CHARGE_OBJECTS:
+            self.flag("LOANWORD", f"{lemma}→{LOAN_EN2MW[lemma]} (electronic-device context)")
+            self.lex_trace.append((lemma, "LOANWORD", LOAN_EN2MW[lemma]))
+            return LOAN_EN2MW[lemma]
         c = self.lex.en_lookup(lemma, pos)
         if c and lemma in LOAN_EN2MW and tok.pos_ == "NOUN" and not any(x[0] == 0 for x in c):
             pass
@@ -365,6 +403,11 @@ class EnglishToMw:
             alts = [x[3]["lemma"] for x in c[1:3]]
             self.lex_trace.append((lemma, q["tier"], e["lemma"] + (f" (alts: {', '.join(alts)})" if alts else "")))
             return e["lemma"]
+        # native-speaker-verified noun bridge: avoid raw English token fall-through
+        if lemma in NOUN_BRIDGE:
+            self.flag("NOUN_BRIDGE", f"{lemma}→{NOUN_BRIDGE[lemma]}")
+            self.lex_trace.append((lemma, "NOUN_BRIDGE", NOUN_BRIDGE[lemma]))
+            return NOUN_BRIDGE[lemma]
         if lemma in LOAN_EN2MW:
             self.flag("LOANWORD", f"{lemma}→{LOAN_EN2MW[lemma]}")
             self.lex_trace.append((lemma, "LOANWORD", LOAN_EN2MW[lemma]))
@@ -445,7 +488,7 @@ class EnglishToMw:
         return toks
 
     # ---- NP
-    def np(self, h, restrict=None, loc_governed=False, as_object=False, skip_relcl=False):
+    def np(self, h, restrict=None, loc_governed=False, as_object=False, skip_relcl=False, obj_context=None):
         kids = lambda dep: [c for c in h.children if c.dep_ in dep and (restrict is None or c.i in restrict or True)]
         if h.pos_ == "PRON":
             lem = h.lower_
@@ -459,7 +502,7 @@ class EnglishToMw:
             return [tab.get(key, key)]
         if h.pos_ == "DET" and h.lower_ in WH_SET | {"what", "this", "that"}:
             return [{"this": "ɗiisɨ̀", "that": "mɨni", "what": "me"}.get(h.lower_, h.text)]
-        word = self.lex_en(h)
+        word = self.lex_en(h, obj_context=obj_context)
         kin = h.lemma_.lower() in KINSHIP
         if kin:
             self.flag("KINSHIP", h.lemma_.lower())
@@ -536,6 +579,14 @@ class EnglishToMw:
         prep = p.lower_
         objs = [c for c in p.children if c.dep_ in ("pobj", "dobj")]
         form, fused, supp = PREP_MAP.get(prep, (None, False, False))
+        # Vehicle / enclosed-space container: "on/in the bus" -> n’ɣɨɨn ("inside")
+        # rather than n’kaa ("on top of").
+        if form is not None and prep in ("on", "in") and objs:
+            obj_text = " ".join(c.lower_ for c in objs)
+            if any(w in obj_text for w in VEHICLE_NOUNS):
+                form, fused, supp = "n’ɣɨɨn", False, False
+                self.rule("vehicle container: on/in the <vehicle> -> n’ɣɨɨn", "GOLD",
+                          f"{obj_text} -> inside")
         if form is None:
             lw = self.lex_en(p, "ADP")
             form, fused, supp = lw, False, False
@@ -622,7 +673,7 @@ class EnglishToMw:
                 V = ["a"]
             verb_tok = None
         else:
-            vw = self.lex_en(v, "VERB") if v.pos_ in ("VERB", "AUX") else self.lex_en(v)
+            vw = self.lex_en(v, "VERB", obj_context=_verb_obj_text(v, ch)) if v.pos_ in ("VERB", "AUX") else self.lex_en(v)
             if fut:
                 vw = "n’" + vw
             V = ([pre] if pre else []) + [vw]
@@ -637,7 +688,16 @@ class EnglishToMw:
         dat = [c for c in ch if c.dep_ in ("dative", "iobj")]
         dobj = [c for c in ch if c.dep_ == "dobj" and c.lower_ not in WH_SET]
         for d in dobj:
-            O += self.np(d, as_object=True)
+            # Standalone reflexive pronoun -> bare Mwaghavul reflexive (sut series).
+            # sut already encodes "themselves"; it NEVER takes a redundant possessive
+            # pronoun (f…
+            if d.lower_ in REFLEX_EN2MW:
+                self.rule("reflexive: standalone -self/-selves → bare sut reflexive (no possessive)", "GOLD",
+                          f"{d.lower_}→{REFLEX_EN2MW[d.lower_]}")
+                self.lex_trace.append((d.lower_, "REFLEX", REFLEX_EN2MW[d.lower_]))
+                O += [REFLEX_EN2MW[d.lower_]]
+                continue
+            O += self.np(d, as_object=True, obj_context=d.text)
         for d in dat:
             if d.pos_ == "PRON":
                 O += [DAT_PRON.get(d.lower_, "n’" + d.lower_)]
@@ -653,8 +713,16 @@ class EnglishToMw:
                 P += self.pp(c)
             elif c.dep_ == "agent":
                 P += self.pp(c)
-            elif c.dep_ in ("npadvmod", "advmod") and c.lower_ not in WH_SET | {"not", "n't", "here", "there"}:
-                P += [self.lex_en(c, "ADV")]
+            elif c.dep_ in ("npadvmod", "advmod") and c.lower_ not in WH_SET | {"not", "n't", "here", "there", "ago"}:
+                # Standalone reflexive as a clause-level adverbial ("built the house themselves")
+                # -> bare sut reflexive, never a redundant possessive.
+                if c.lower_ in REFLEX_EN2MW:
+                    self.rule("reflexive: standalone -self/-selves → bare sut reflexive (no possessive)", "GOLD",
+                              f"{c.lower_}→{REFLEX_EN2MW[c.lower_]}")
+                    self.lex_trace.append((c.lower_, "REFLEX", REFLEX_EN2MW[c.lower_]))
+                    P += [REFLEX_EN2MW[c.lower_]]
+                else:
+                    P += [self.lex_en(c, "ADV")]
             elif c.dep_ in ("xcomp", "ccomp", "advcl", "conj", "cc"):
                 if c.dep_ == "cc":
                     P += ["kɨ" if c.lower_ == "and" else self.lex_en(c, "CCONJ")]
@@ -662,34 +730,50 @@ class EnglishToMw:
                     P += self.clause(c)
             elif c.dep_ == "oprd":
                 P += self.np(c)
-        # ---- assemble
+        # ---- temporal "ago": elapsed-time frame.  "V N days ago" -> "a m'puus <days> ni" placed
+        # immediately before V (matching the GOLD structure … so a m’puus <days> ni <verb>).
+        ago = [c for c in ch if c.lower_ == "ago" and c.dep_ == "advmod"]
+        TEMP = []
+        if ago and not is_cop:
+            # GOLD elapsed-time relative clause: puus ɗii-<num> ɗi ni ɗel
+            # ("day REL-number REL it pass").  Always at the clause periphery.
+            days_toks = []
+            for noun in [x for x in ago[0].children if x.pos_ in ("NOUN", "NUM", "PROPN")]:
+                for num in [y for y in noun.children if y.dep_ == "nummod" and y.pos_ == "NUM"]:
+                    days_toks += self.np(num, as_object=True)
+                if not days_toks and noun.pos_ == "NUM":
+                    days_toks += self.np(noun, as_object=True)
+            self.rule("temporal ago: puus ɗii-<num> ɗi ni ɗel (elapsed-time relative clause)", "GOLD",
+                      "… puus ɗii-<num> ɗi ni ɗel")
+            TEMP = ["puus", "ɗii-" + (days_toks[0] if days_toks else "vul"), "ɗi", "ni", "ɗel"]
+        # ---- assemble.  Mwaghavul is strictly SVO: S + V + O + locative P + temporal P.
+        # Never move the main verb after the direct object.
         toks = []
         if neg and not subj and cat == "base/infinitive/imperative":
-            toks += ["taji", "a"] + V + O + P + ["kas"]
+            toks += ["taji", "a"] + V + O + P + TEMP + ["kas"]
             self.rule("negative imperative: taji a V … kas", "GOLD", "PROH")
             return toks
         if neg:
             toks += ["ba"]
             self.rule("negation: ba … kas", "GOLD", "clause-final kas")
         if wh_subj:
-            toks += ["a", WH[wh_subj[0].lower_]] + V + O + P
-            toks += ["ye" if wh_subj[0].lower_ == "who" else "’e"]
+            toks += ["a", WH[wh_subj[0].lower_]] + V + O + P + TEMP
+            toks += ["ye" if wh_subj[0].lower_ == "who" else "ʼ e"]
             self.rule("subject wh-question: FOC a WH V … Q", "GOLD", f"{wh_subj[0].lower_}")
         elif wh_adv and not is_cop:
-            toks += S + V + O + P + ["a", WH[wh_adv[0].lower_], "’e"]
-            self.rule("adverbial wh: S V … a WH ’e", "GOLD", wh_adv[0].lower_)
+            toks += S + V + O + P + TEMP + ["a", WH[wh_adv[0].lower_], "ʼ e"]
+            self.rule("adverbial wh: S V … a WH ʼ e", "GOLD", wh_adv[0].lower_)
         elif wh_obj:
-            toks += S + V + O + P + ["’e"]
-            self.rule("object wh: S V WH ’e (neutral)", "GOLD", "")
+            toks += S + V + O + P + TEMP + ["ʼ e"]
+            self.rule("object wh: S V WH ʼ e (neutral)", "GOLD", "")
         elif is_cop and wh_adv:
-            toks += S + ["a", WH[wh_adv[0].lower_], "’e"]
-            self.rule("copular wh: S a WH ’e", "GOLD", wh_adv[0].lower_)
+            toks += S + ["a", WH[wh_adv[0].lower_], "ʼ e"]
+            self.rule("copular wh: S a WH ʼ e", "GOLD", wh_adv[0].lower_)
         else:
-            toks += S + V + O + P
+            toks += S + V + O + P + TEMP
         if neg:
             toks += ["kas"]
         return toks
-
 # ----------------------------------------------------------------------------- Mwaghavul -> English
 class MwToEnglish:
     def __init__(self, lex, gram):
