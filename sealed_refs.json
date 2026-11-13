@@ -1,0 +1,72 @@
+[
+ {
+  "id": "H01",
+  "direction": "EN→MW",
+  "reference": "Ri nkaa se kóm.",
+  "corpus_id": "GOL-000083",
+  "ref": "72"
+ },
+ {
+  "id": "H02",
+  "direction": "EN→MW",
+  "reference": "Mo kwoop sut.",
+  "corpus_id": "GOL-000018",
+  "ref": "18"
+ },
+ {
+  "id": "H03",
+  "direction": "EN→MW",
+  "reference": "Ri ɗel so a m’puus ɗii-kun ɗi ni ɗel.",
+  "corpus_id": "GOL-000490",
+  "ref": "537"
+ },
+ {
+  "id": "H04",
+  "direction": "EN→MW",
+  "reference": "Pùk ni gyar tal.",
+  "corpus_id": "GOL-000069",
+  "ref": "59"
+ },
+ {
+  "id": "H05",
+  "direction": "EN→MW",
+  "reference": "Mo nang nne mun n’ɓam mo ’e.",
+  "corpus_id": "GOL-000204",
+  "ref": "190"
+ },
+ {
+  "id": "H06",
+  "direction": "MW→EN",
+  "reference": "a little house",
+  "corpus_id": "GOL-000540",
+  "ref": "B6a"
+ },
+ {
+  "id": "H07",
+  "direction": "MW→EN",
+  "reference": "I saw it.",
+  "corpus_id": "GOL-000382",
+  "ref": "428"
+ },
+ {
+  "id": "H08",
+  "direction": "MW→EN",
+  "reference": "He hit him again and again.",
+  "corpus_id": "GOL-000570",
+  "ref": "D1"
+ },
+ {
+  "id": "H09",
+  "direction": "MW→EN",
+  "reference": "I saw myself in the water.",
+  "corpus_id": "GOL-006341",
+  "ref": "16a"
+ },
+ {
+  "id": "H10",
+  "direction": "MW→EN",
+  "reference": "A man’s work is hard.",
+  "corpus_id": "GOL-000048",
+  "ref": "43"
+ }
+]

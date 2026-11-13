@@ -1,0 +1,92 @@
+[
+ {
+  "id": "H01",
+  "direction": "EN→MW",
+  "source": "He is eating groundnut.",
+  "cluster_size": 9
+ },
+ {
+  "id": "H02",
+  "direction": "EN→MW",
+  "source": "They praised themselves.",
+  "cluster_size": 1
+ },
+ {
+  "id": "H03",
+  "direction": "EN→MW",
+  "source": "He left three days ago.",
+  "cluster_size": 1
+ },
+ {
+  "id": "H04",
+  "direction": "EN→MW",
+  "source": "The soup is too hot.",
+  "cluster_size": 1
+ },
+ {
+  "id": "H05",
+  "direction": "EN→MW",
+  "source": "They asked if we would help them.",
+  "cluster_size": 1
+ },
+ {
+  "id": "H06",
+  "direction": "MW→EN",
+  "source": "Lu ɗiilee.",
+  "cluster_size": 2
+ },
+ {
+  "id": "H07",
+  "direction": "MW→EN",
+  "source": "Ɨn naa ni.",
+  "cluster_size": 1
+ },
+ {
+  "id": "H08",
+  "direction": "MW→EN",
+  "source": "Ri nɨram ri, nɨram ri, nɨram ri.",
+  "cluster_size": 3
+ },
+ {
+  "id": "H09",
+  "direction": "MW→EN",
+  "source": "Ɨn naa san a n’ɗɨghɨn àm.",
+  "cluster_size": 2
+ },
+ {
+  "id": "H10",
+  "direction": "MW→EN",
+  "source": "Ɗak ’ɨ̀ gwar shwal.",
+  "cluster_size": 1
+ },
+ {
+  "id": "M01",
+  "direction": "EN→MW",
+  "source": "It was her father who repaired the radio.",
+  "cluster_size": null
+ },
+ {
+  "id": "M02",
+  "direction": "EN→MW",
+  "source": "The driver's bus is at the hospital.",
+  "cluster_size": null
+ },
+ {
+  "id": "M03",
+  "direction": "EN→MW",
+  "source": "Where did your sister buy the television?",
+  "cluster_size": null
+ },
+ {
+  "id": "M04",
+  "direction": "EN→MW",
+  "source": "His wife is not at the market.",
+  "cluster_size": null
+ },
+ {
+  "id": "M05",
+  "direction": "EN→MW",
+  "source": "The girl is charging a phone at the school.",
+  "cluster_size": null
+ }
+]

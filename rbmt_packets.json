@@ -1,0 +1,2142 @@
+[
+ {
+  "input": "He is eating groundnut.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Ri nkaa se [groundnut].",
+  "flags": [
+   "OOV:groundnut"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English progressive → nkaa",
+    "tier": "GOLD",
+    "detail": "top_marker=nkaa (share=0.746, n=63)"
+   },
+   {
+    "rule": "valency frame for 'se': O+S → S V O",
+    "tier": "GOLD",
+    "detail": "n=40"
+   }
+  ],
+  "lex_trace": [
+   [
+    "He",
+    "CLOSED",
+    "ri"
+   ],
+   [
+    "eat",
+    "GOLD",
+    "se (alts: pòo tung kom yoghon)"
+   ],
+   [
+    "groundnut",
+    "OOV",
+    "[groundnut]"
+   ]
+  ],
+  "analysis": [
+   [
+    "He",
+    "he",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "eating"
+   ],
+   [
+    "is",
+    "be",
+    "AUX",
+    "VBZ",
+    "aux",
+    "eating"
+   ],
+   [
+    "eating",
+    "eat",
+    "VERB",
+    "VBG",
+    "ROOT",
+    "eating"
+   ],
+   [
+    "groundnut",
+    "groundnut",
+    "ADJ",
+    "JJ",
+    "dobj",
+    "eating"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "eating"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.523,
+    "id": "GOL-000090",
+    "mwaghavul": "Ri pu se kóm nɗi ɨn jì wul.",
+    "english": "He was eating groundnut when I arrived.",
+    "ref": "78"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.461,
+    "id": "GOL-000230",
+    "mwaghavul": "Ɗí ri ’í se kóm m’ɓit ɗí mo ’ó ɗel.",
+    "english": "He used to eat groundnut, years ago.",
+    "ref": "S16"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.388,
+    "id": "GOL-000130",
+    "mwaghavul": "Ba ri nkaa se kas. ~ Ba ri pu se kas.",
+    "english": "He is not eating.",
+    "ref": "117"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.289,
+    "id": "SIL-006738",
+    "mwaghavul": "Ri a ciiwurang.",
+    "english": "He is a midget.",
+    "ref": "MW00555#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.269,
+    "id": "SIL-006774",
+    "mwaghavul": "Mo kɨ ɗak bangkur a shi kóm.",
+    "english": "Groundnut cakes are made from groundnuts.",
+    "ref": "MW00167#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.199,
+    "id": "BRO-014005",
+    "mwaghavul": "Làa ni kɨ̀ mùut",
+    "english": "He is dead",
+    "ref": "Mark 9:26"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.182,
+    "id": "BRO-009739",
+    "mwaghavul": "wuɗi a nɗɨghɨn peeɓang ni",
+    "english": "he is in the light",
+    "ref": "1 John 2:9"
+   }
+  ],
+  "id": "H01",
+  "max_source_side_jaccard": 0.6
+ },
+ {
+  "input": "They praised themselves.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Mo kwoop themselves.",
+  "flags": [],
+  "rules": [
+   {
+    "rule": "TAM: English simple_past → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.974, n=271)"
+   },
+   {
+    "rule": "valency frame for 'kwoop': O → V O",
+    "tier": "BRONZE",
+    "detail": "n=43"
+   }
+  ],
+  "lex_trace": [
+   [
+    "They",
+    "CLOSED",
+    "mo"
+   ],
+   [
+    "praise",
+    "GOLD",
+    "kwoop"
+   ],
+   [
+    "themselves",
+    "CLOSED",
+    "themselves"
+   ]
+  ],
+  "analysis": [
+   [
+    "They",
+    "they",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "praised"
+   ],
+   [
+    "praised",
+    "praise",
+    "VERB",
+    "VBD",
+    "ROOT",
+    "praised"
+   ],
+   [
+    "themselves",
+    "themselves",
+    "PRON",
+    "PRP",
+    "dobj",
+    "praised"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "praised"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.185,
+    "id": "GOL-000284",
+    "mwaghavul": "Mo man an.",
+    "english": "They know me.",
+    "ref": "330"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.175,
+    "id": "GOL-000526",
+    "mwaghavul": "Mo naa sut.",
+    "english": "They saw each other.",
+    "ref": "A10"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.164,
+    "id": "GOL-000004",
+    "mwaghavul": "Mumun se doghon.",
+    "english": "We (they and I) ate yesterday.",
+    "ref": "4"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.145,
+    "id": "SIL-006993",
+    "mwaghavul": "A nook ɗar atɨ̀leng kɨ mbii ɗi n’nyee mo nkaa cìn mpèe ɓam sut.",
+    "english": "Don’t stand apart when others are doing something to help themselves.",
+    "ref": "MW00129#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.14,
+    "id": "SIL-006525",
+    "mwaghavul": "N’tar kut ɓe nyem nan mo kɨ aghat sut a wus.",
+    "english": "During the harmattan elderly people warm themselves up by the fire.",
+    "ref": "MW00062#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.472,
+    "id": "BRO-015365",
+    "mwaghavul": "sut furu",
+    "english": "themselves",
+    "ref": "Matthew 19:12"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.472,
+    "id": "BRO-016494",
+    "mwaghavul": "mo mmusut",
+    "english": "themselves",
+    "ref": "Mark 9:2"
+   }
+  ],
+  "id": "H02",
+  "max_source_side_jaccard": 0.33
+ },
+ {
+  "input": "He left three days ago.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Ri ɗee [ago].",
+  "flags": [
+   "OOV:ago"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English simple_past → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.974, n=271)"
+   },
+   {
+    "rule": "valency frame for 'ɗee': S → S V",
+    "tier": "GOLD",
+    "detail": "n=6"
+   }
+  ],
+  "lex_trace": [
+   [
+    "He",
+    "CLOSED",
+    "ri"
+   ],
+   [
+    "leave",
+    "GOLD",
+    "ɗee (alts: yit, ɗel)"
+   ],
+   [
+    "ago",
+    "OOV",
+    "[ago]"
+   ]
+  ],
+  "analysis": [
+   [
+    "He",
+    "he",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "left"
+   ],
+   [
+    "left",
+    "leave",
+    "VERB",
+    "VBD",
+    "ROOT",
+    "left"
+   ],
+   [
+    "three",
+    "three",
+    "NUM",
+    "CD",
+    "nummod",
+    "days"
+   ],
+   [
+    "days",
+    "day",
+    "NOUN",
+    "NNS",
+    "npadvmod",
+    "ago"
+   ],
+   [
+    "ago",
+    "ago",
+    "ADV",
+    "RB",
+    "advmod",
+    "left"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "left"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.375,
+    "id": "GOL-000160",
+    "mwaghavul": "Doghon ri ɗel so.",
+    "english": "Yesterday he left.",
+    "ref": "144"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.339,
+    "id": "GOL-000489",
+    "mwaghavul": "Ɨn tong m’pee mɨni teer kun.",
+    "english": "I stayed there for three days.",
+    "ref": "536"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.239,
+    "id": "GOL-000229",
+    "mwaghavul": "Ɗí ri ’í se kóm ji. ~ … ji-ji.",
+    "english": "He ate groundnut long ago.",
+    "ref": "S15"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.296,
+    "id": "SIL-006359",
+    "mwaghavul": "Ri so nɗin n’sat ɗangmukaat.",
+    "english": "He left without saying goodbye.",
+    "ref": "MW00810#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.192,
+    "id": "SIL-007337",
+    "mwaghavul": "Ngukwat ni kɨ às kwàt mo kun.",
+    "english": "The hunter has three hounds.",
+    "ref": "MW00118#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.343,
+    "id": "BRO-016053",
+    "mwaghavul": "nɗɨghɨn shiiteer mo kun",
+    "english": "in three days",
+    "ref": "Matthew 26:61"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.27,
+    "id": "BRO-014611",
+    "mwaghavul": "Ɓe parpuus ɗiikún",
+    "english": "and after three days",
+    "ref": "Mark 8:31"
+   }
+  ],
+  "id": "H03",
+  "max_source_side_jaccard": 0.33
+ },
+ {
+  "input": "The soup is too hot.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Pùk ni ɗiital.",
+  "flags": [],
+  "rules": [
+   {
+    "rule": "TAM: English simple_present → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.592, n=49)"
+   },
+   {
+    "rule": "predicate adjective: stative verb, no copula",
+    "tier": "GOLD",
+    "detail": "S ADJ"
+   }
+  ],
+  "lex_trace": [
+   [
+    "soup",
+    "GOLD",
+    "pùk (alts: pùk mumwish, pùk muwish)"
+   ],
+   [
+    "hot",
+    "GOLD",
+    "ɗiital"
+   ]
+  ],
+  "analysis": [
+   [
+    "The",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "soup"
+   ],
+   [
+    "soup",
+    "soup",
+    "NOUN",
+    "NN",
+    "nsubj",
+    "is"
+   ],
+   [
+    "is",
+    "be",
+    "AUX",
+    "VBZ",
+    "ROOT",
+    "is"
+   ],
+   [
+    "too",
+    "too",
+    "ADV",
+    "RB",
+    "advmod",
+    "hot"
+   ],
+   [
+    "hot",
+    "hot",
+    "ADJ",
+    "JJ",
+    "acomp",
+    "is"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "is"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.46,
+    "id": "GOL-000508",
+    "mwaghavul": "Pee ni gyar tal mu cìn ɗak cicin.",
+    "english": "It is too hot to work today.",
+    "ref": "555"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.295,
+    "id": "GOL-000180",
+    "mwaghavul": "Ra tung pùk ni lee-lee.",
+    "english": "She stirred the soup slowly.",
+    "ref": "166"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.206,
+    "id": "GOL-000226",
+    "mwaghavul": "Koo mee lu ɗiiɗang ’e gyar kùs zam.",
+    "english": "Every house is far too big.",
+    "ref": "S12"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.47,
+    "id": "SIL-006683",
+    "mwaghavul": "Puus ni gyar ɓaan.",
+    "english": "The sun is too hot.",
+    "ref": "MW00256#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.316,
+    "id": "SIL-007397",
+    "mwaghavul": "Wáar ni tal cii mwak.",
+    "english": "The cereal beverage is too hot to drink.",
+    "ref": "MW04923#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.151,
+    "id": "BRO-008198",
+    "mwaghavul": "koo ɗiital",
+    "english": "or hot",
+    "ref": "Revelation 3:15"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.054,
+    "id": "BRO-014002",
+    "mwaghavul": "Ni aasɨ nɗɨghɨn pee ɗiisɨ",
+    "english": "Even so too at this present time",
+    "ref": "Romans 11:5"
+   }
+  ],
+  "id": "H04",
+  "max_source_side_jaccard": 0.67
+ },
+ {
+  "input": "They asked if we would help them.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Mo nang mun ɓam mo.",
+  "flags": [
+   "MODAL_UNMAPPED:would",
+   "AMBIG:we→mun (incl.)|mumun (excl.)"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English simple_past → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.974, n=271)"
+   },
+   {
+    "rule": "valency (no verb-specific frame): default arg structure",
+    "tier": "TIER_4_GENERALIZED",
+    "detail": "O+S → S V O"
+   },
+   {
+    "rule": "TAM: English modal → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.391, n=23)"
+   },
+   {
+    "rule": "valency frame for 'ɓam': O+S → S V O",
+    "tier": "GOLD",
+    "detail": "n=4"
+   }
+  ],
+  "lex_trace": [
+   [
+    "They",
+    "CLOSED",
+    "mo"
+   ],
+   [
+    "ask",
+    "GOLD",
+    "nang (alts: ɗang, tangpee)"
+   ],
+   [
+    "we",
+    "CLOSED",
+    "mun"
+   ],
+   [
+    "help",
+    "GOLD",
+    "ɓam (alts: ɓáan)"
+   ],
+   [
+    "them",
+    "CLOSED",
+    "mo"
+   ]
+  ],
+  "analysis": [
+   [
+    "They",
+    "they",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "asked"
+   ],
+   [
+    "asked",
+    "ask",
+    "VERB",
+    "VBD",
+    "ROOT",
+    "asked"
+   ],
+   [
+    "if",
+    "if",
+    "SCONJ",
+    "IN",
+    "mark",
+    "help"
+   ],
+   [
+    "we",
+    "we",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "help"
+   ],
+   [
+    "would",
+    "would",
+    "AUX",
+    "MD",
+    "aux",
+    "help"
+   ],
+   [
+    "help",
+    "help",
+    "VERB",
+    "VB",
+    "ccomp",
+    "asked"
+   ],
+   [
+    "them",
+    "they",
+    "PRON",
+    "PRP",
+    "dobj",
+    "help"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "asked"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.222,
+    "id": "GOL-000209",
+    "mwaghavul": "Ri ɓam an mang lée ni.",
+    "english": "He helped me carry the load.",
+    "ref": "195"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.179,
+    "id": "GOL-000092",
+    "mwaghavul": "Kàt ɗí ri kɨling neen ɓe ri n’sese.",
+    "english": "He would eat if he were hungry.",
+    "ref": "80"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.177,
+    "id": "GOL-000460",
+    "mwaghavul": "Mu ɓam ri.",
+    "english": "We (incl.) should help him.",
+    "ref": "507"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.195,
+    "id": "SIL-006479",
+    "mwaghavul": "Mu pɨlang ɓáan ni.",
+    "english": "We appreciate the help.",
+    "ref": "MW00258#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.186,
+    "id": "SIL-006873",
+    "mwaghavul": "A ɓam an wa?",
+    "english": "Will you help me?",
+    "ref": "MW05327#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.339,
+    "id": "BRO-011553",
+    "mwaghavul": "Katɗang mun",
+    "english": "If we",
+    "ref": "1 Corinthians 9:11"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.275,
+    "id": "BRO-010489",
+    "mwaghavul": "mpeeku mo jì ɓam mo ɗi",
+    "english": "that they should come and help them",
+    "ref": "Luke 5:7"
+   }
+  ],
+  "id": "H05",
+  "max_source_side_jaccard": 0.29
+ },
+ {
+  "input": "Lu ɗiilee.",
+  "lang": "mw",
+  "direction": "MW→EN",
+  "draft": "little house",
+  "flags": [],
+  "rules": [
+   {
+    "rule": "NP reorder: N ADJ/DEM/POSS/DEF → DET/POSS ADJ N",
+    "tier": "GOLD",
+    "detail": "Lu ɗiilee"
+   }
+  ],
+  "lex_trace": [
+   [
+    "Lu",
+    "GOLD",
+    "house"
+   ],
+   [
+    "ɗiilee",
+    "GOLD",
+    "little"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.334,
+    "id": "GOL-000548",
+    "mwaghavul": "Lù ni.",
+    "english": "the building (the structure)",
+    "ref": "B10b"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.178,
+    "id": "GOL-000112",
+    "mwaghavul": "Mo ɗik lu ni.",
+    "english": "They built the house.",
+    "ref": "99"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.177,
+    "id": "GOL-000283",
+    "mwaghavul": "Lu mɨni a lu ’ù puun fɨna.",
+    "english": "That is my father’s house.",
+    "ref": "329"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.185,
+    "id": "SIL-006886",
+    "mwaghavul": "A ndòk ɗiilee a ɗoo ɗiivùl.",
+    "english": "Ndòk ɗiilee is the second pitch.",
+    "ref": "MW00501#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.185,
+    "id": "SIL-007066",
+    "mwaghavul": "A ruruu ɗiilee a ɗoo ɗiikún.",
+    "english": "Ruruu ɗiilee is the third pitch.",
+    "ref": "MW00505#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.353,
+    "id": "BRO-011884",
+    "mwaghavul": "ɗiilee met",
+    "english": "least",
+    "ref": "Matthew 5:19"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.325,
+    "id": "BRO-013469",
+    "mwaghavul": "Lang ɗiilee",
+    "english": "After a little",
+    "ref": "Luke 22:58"
+   }
+  ],
+  "id": "H06",
+  "analysis": null,
+  "max_source_side_jaccard": 0.33
+ },
+ {
+  "input": "Ɨn naa ni.",
+  "lang": "mw",
+  "direction": "MW→EN",
+  "draft": "I see it",
+  "flags": [],
+  "rules": [],
+  "lex_trace": [
+   [
+    "Ɨn",
+    "GOLD",
+    "I"
+   ],
+   [
+    "naa",
+    "GOLD",
+    "see  [homographs: V:see, PREF:respect prefix applied to the name of a younger woman, N:mother, N:reference to any woman]"
+   ],
+   [
+    "ni",
+    "GOLD",
+    "DEF"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.393,
+    "id": "GOL-000223",
+    "mwaghavul": "Ɨn naa ri m’pesɨ.",
+    "english": "I saw him there.",
+    "ref": "S9"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.393,
+    "id": "GOL-000221",
+    "mwaghavul": "Ɨn naa ri m’pesɨ̀.",
+    "english": "I saw him here.",
+    "ref": "S7"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.379,
+    "id": "GOL-000219",
+    "mwaghavul": "Ɨn naa ri n’lutuk.",
+    "english": "I saw him at the market.",
+    "ref": "S5"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.302,
+    "id": "SIL-006393",
+    "mwaghavul": "Nàá ni ret zam.",
+    "english": "The woman is good.",
+    "ref": "MW03060#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.071,
+    "id": "SIL-006961",
+    "mwaghavul": "Naa, wát ni m’pesɨ!",
+    "english": "Look, there is the thief!",
+    "ref": "MW04062#2"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.27,
+    "id": "BRO-014988",
+    "mwaghavul": "wuri kɨ naa ni",
+    "english": "He saw it",
+    "ref": "John 8:56"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.252,
+    "id": "BRO-010074",
+    "mwaghavul": "amma ba wún m’mak naa ni kas",
+    "english": "and you will not see it",
+    "ref": "Luke 17:22"
+   }
+  ],
+  "id": "H07",
+  "analysis": null,
+  "max_source_side_jaccard": 0.4
+ },
+ {
+  "input": "Ri nɨram ri, nɨram ri, nɨram ri.",
+  "lang": "mw",
+  "direction": "MW→EN",
+  "draft": "he hit he hit he hit he",
+  "flags": [],
+  "rules": [],
+  "lex_trace": [
+   [
+    "Ri",
+    "GOLD",
+    "he"
+   ],
+   [
+    "nɨram",
+    "GOLD",
+    "hit"
+   ],
+   [
+    "ri",
+    "GOLD",
+    "he"
+   ],
+   [
+    "nɨram",
+    "GOLD",
+    "hit"
+   ],
+   [
+    "ri",
+    "GOLD",
+    "he"
+   ],
+   [
+    "nɨram",
+    "GOLD",
+    "hit"
+   ],
+   [
+    "ri",
+    "GOLD",
+    "he"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.281,
+    "id": "GOL-000101",
+    "mwaghavul": "Làa ni nɨram as ni.",
+    "english": "The child hit the dog repeatedly.",
+    "ref": "88"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.23,
+    "id": "GOL-000102",
+    "mwaghavul": "Làa ni nɨram as ni mo mɨndong-mɨndong.",
+    "english": "The child hit the dogs one by one.",
+    "ref": "89"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.182,
+    "id": "GOL-000460",
+    "mwaghavul": "Mu ɓam ri.",
+    "english": "We (incl.) should help him.",
+    "ref": "507"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.197,
+    "id": "SIL-007077",
+    "mwaghavul": "Ri cut ra n’kɨpak.",
+    "english": "He hit her on the cheek.",
+    "ref": "MW00618#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.191,
+    "id": "SIL-007369",
+    "mwaghavul": "Ri zaghat kam n’ra.",
+    "english": "He hit her with a long stick.",
+    "ref": "MW05624#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.346,
+    "id": "BRO-007689",
+    "mwaghavul": "Mo nɨram wuri",
+    "english": "and beat him",
+    "ref": "Luke 10:30"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.206,
+    "id": "BRO-011175",
+    "mwaghavul": "Doghon mo kɨ̀ nɨram mun agaak",
+    "english": "They have beaten us publicly",
+    "ref": "Acts 16:37"
+   }
+  ],
+  "id": "H08",
+  "analysis": null,
+  "max_source_side_jaccard": 0.25
+ },
+ {
+  "input": "Ɨn naa san a n’ɗɨghɨn àm.",
+  "lang": "mw",
+  "direction": "MW→EN",
+  "draft": "I see my body is at/in/to pen water",
+  "flags": [],
+  "rules": [],
+  "lex_trace": [
+   [
+    "Ɨn",
+    "GOLD",
+    "I"
+   ],
+   [
+    "naa",
+    "GOLD",
+    "see  [homographs: V:see, PREF:respect prefix applied to the name of a younger woman, N:mother, N:reference to any woman]"
+   ],
+   [
+    "san",
+    "GOLD",
+    "my body  [homographs: N:my body, V:accidentally pour liquid away or on someone, PRON:myself]"
+   ],
+   [
+    "a",
+    "GOLD",
+    "is"
+   ],
+   [
+    "n’ɗɨghɨn",
+    "GOLD",
+    "pen"
+   ],
+   [
+    "àm",
+    "GOLD",
+    "water  [homographs: V:peel, N:water, N:applied to any sort of drink when in conversation at a festival]"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.253,
+    "id": "GOL-000268",
+    "mwaghavul": "Làa ni a n’ɗɨghɨn lu ni.",
+    "english": "The child is in the house.",
+    "ref": "314"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.238,
+    "id": "GOL-000373",
+    "mwaghavul": "Ɨn naa nne àm ni kɨ̀ kyes.",
+    "english": "I saw that the water was finished.",
+    "ref": "419"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.234,
+    "id": "GOL-000215",
+    "mwaghavul": "Ɗáng mishkagham ni ri naa shin n’ɗɨghɨn àm ni.",
+    "english": "The chief saw himself in the water.",
+    "ref": "S1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.06,
+    "id": "SIL-006551",
+    "mwaghavul": "Àm ni a dɨɓen.",
+    "english": "Water the is little.",
+    "ref": "MW00712#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.06,
+    "id": "SIL-006385",
+    "mwaghavul": "Àm ni a ɓúl-ɓúl.",
+    "english": "The water is lukewarm.",
+    "ref": "MW00375#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.174,
+    "id": "BRO-013289",
+    "mwaghavul": "a san fɨna",
+    "english": "is my body",
+    "ref": "Matthew 26:26"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.159,
+    "id": "BRO-009051",
+    "mwaghavul": "ni a san fɨna",
+    "english": "This is my body",
+    "ref": "Mark 14:22"
+   }
+  ],
+  "id": "H09",
+  "analysis": null,
+  "max_source_side_jaccard": 0.3
+ },
+ {
+  "input": "Ɗak ’ɨ̀ gwar shwal.",
+  "lang": "mw",
+  "direction": "MW→EN",
+  "draft": "man ’s work hard",
+  "flags": [],
+  "rules": [
+   {
+    "rule": "Noun GEN Noun2 → Noun2’s Noun (HEAD_BEFORE_DEP reversed)",
+    "tier": "GOLD",
+    "detail": "Ɗak ’ɨ̀ gwar"
+   },
+   {
+    "rule": "NP reorder: N ADJ/DEM/POSS/DEF → DET/POSS ADJ N",
+    "tier": "GOLD",
+    "detail": "Ɗak ’ɨ̀ gwar"
+   }
+  ],
+  "lex_trace": [
+   [
+    "Ɗak",
+    "GOLD",
+    "work  [homographs: V:prepare, V:work, ADV:only, ADJ:only, N:work]"
+   ],
+   [
+    "’ɨ̀",
+    "GOLD",
+    "’s(GEN)"
+   ],
+   [
+    "gwar",
+    "GOLD",
+    "man"
+   ],
+   [
+    "shwal",
+    "GOLD",
+    "hard  [homographs: V:be long, N:hard]"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.373,
+    "id": "GOL-000041",
+    "mwaghavul": "Dang ’ɨ̀ as ni shwàl.",
+    "english": "The dog’s tail is long.",
+    "ref": "38"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.348,
+    "id": "GOL-000354",
+    "mwaghavul": "Ɗak ni shwal.",
+    "english": "The work is hard.",
+    "ref": "400"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.301,
+    "id": "GOL-000248",
+    "mwaghavul": "Jì shwàl.",
+    "english": "Coming is difficult.",
+    "ref": "S34"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.248,
+    "id": "SIL-006690",
+    "mwaghavul": "Mishkagham ’ɨ̀ so.",
+    "english": "The chief has gone.",
+    "ref": "MW05728#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.235,
+    "id": "SIL-007006",
+    "mwaghavul": "Cicet shwal.",
+    "english": "Cooking is challenging.",
+    "ref": "MW00530#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.277,
+    "id": "BRO-011578",
+    "mwaghavul": "kɨ shwal",
+    "english": "length and",
+    "ref": "Ephesians 3:18"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.211,
+    "id": "BRO-013587",
+    "mwaghavul": "kɨ shi shwal",
+    "english": "with death",
+    "ref": "Revelation 6:8"
+   }
+  ],
+  "id": "H10",
+  "analysis": null,
+  "max_source_side_jaccard": 0.4
+ },
+ {
+  "input": "It was her father who repaired the radio.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "A puun fɨra ɗak shìkɨ̀lìng ni.",
+  "flags": [
+   "KINSHIP:father"
+  ],
+  "rules": [
+   {
+    "rule": "it-cleft: strip dummy 'it', front copula 'a' (FOC), no mɨni",
+    "tier": "GOLD",
+    "detail": "FOC a + focus + clause (subject-focus: clause subject gap)"
+   },
+   {
+    "rule": "possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]",
+    "tier": "GOLD",
+    "detail": "her→fɨra (poss: HEAD_BEFORE_DEP); never independent mɨ- series"
+   },
+   {
+    "rule": "TAM: English simple_past → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.974, n=271)"
+   },
+   {
+    "rule": "valency frame for 'ɗak': S → S V",
+    "tier": "GOLD",
+    "detail": "n=9"
+   }
+  ],
+  "lex_trace": [
+   [
+    "father",
+    "GOLD",
+    "puun (alts: daa, láa)"
+   ],
+   [
+    "repair",
+    "GOLD",
+    "ɗak (alts: lus, lwas)"
+   ],
+   [
+    "radio",
+    "GOLD",
+    "shìkɨ̀lìng"
+   ]
+  ],
+  "analysis": [
+   [
+    "It",
+    "it",
+    "PRON",
+    "PRP",
+    "nsubj",
+    "was"
+   ],
+   [
+    "was",
+    "be",
+    "AUX",
+    "VBD",
+    "ROOT",
+    "was"
+   ],
+   [
+    "her",
+    "her",
+    "PRON",
+    "PRP$",
+    "poss",
+    "father"
+   ],
+   [
+    "father",
+    "father",
+    "NOUN",
+    "NN",
+    "attr",
+    "was"
+   ],
+   [
+    "who",
+    "who",
+    "PRON",
+    "WP",
+    "nsubj",
+    "repaired"
+   ],
+   [
+    "repaired",
+    "repair",
+    "VERB",
+    "VBD",
+    "ccomp",
+    "was"
+   ],
+   [
+    "the",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "radio"
+   ],
+   [
+    "radio",
+    "radio",
+    "NOUN",
+    "NN",
+    "dobj",
+    "repaired"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "was"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.342,
+    "id": "GOL-000309",
+    "mwaghavul": "Mo nkaa ɗak poolu ni.",
+    "english": "They are repairing the door.",
+    "ref": "355"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.329,
+    "id": "GOL-000437",
+    "mwaghavul": "Puun fɨra a ngumaar.",
+    "english": "Her father is a farmer.",
+    "ref": "484"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.315,
+    "id": "GOL-000356",
+    "mwaghavul": "Ngumaar ni ɗak caan ɗii-tep ni.",
+    "english": "The farmer repaired the broken hoe.",
+    "ref": "402"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.292,
+    "id": "SIL-006490",
+    "mwaghavul": "Puun fɨra a daaslek.",
+    "english": "Her father is a soldier.",
+    "ref": "MW00655#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.272,
+    "id": "SIL-006607",
+    "mwaghavul": "A àak daas tu puun fɨra.",
+    "english": "It was cirrhosis that killed her father.",
+    "ref": "MW00020#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.193,
+    "id": "BRO-009851",
+    "mwaghavul": "puun fɨna ɗí wuri",
+    "english": "my Father who is",
+    "ref": "Matthew 7:21"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.185,
+    "id": "BRO-013171",
+    "mwaghavul": "Mo sat n’wura nne",
+    "english": "it was said to her",
+    "ref": "Romans 9:12"
+   }
+  ],
+  "id": "M01"
+ },
+ {
+  "input": "The driver's bus is at the hospital.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Bas ’ɨ̀ ngu tung nɨsogho ni a n’luyen.",
+  "flags": [
+   "LOANWORD:bus→bas",
+   "GEN_ALLOMORPH_GUESS:’ɨ̀"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English simple_present → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.592, n=49)"
+   },
+   {
+    "rule": "Noun's Noun2 → HEAD_BEFORE_DEP (head + GEN + possessor)",
+    "tier": "GOLD",
+    "detail": "poss HEAD_BEFORE_DEP (n=57); GEN allomorph guess ’ɨ̀"
+   },
+   {
+    "rule": "locative definiteness: suppress trailing ni after n’",
+    "tier": "GOLD",
+    "detail": "luyen: no ni"
+   },
+   {
+    "rule": "preposition 'at' → n’",
+    "tier": "GOLD",
+    "detail": "prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic"
+   },
+   {
+    "rule": "locative predicate: S a n’+NP (COP a)",
+    "tier": "GOLD",
+    "detail": ""
+   }
+  ],
+  "lex_trace": [
+   [
+    "bus",
+    "LOANWORD",
+    "bas"
+   ],
+   [
+    "driver",
+    "GOLD",
+    "ngu tung nɨsogho"
+   ],
+   [
+    "hospital",
+    "GOLD",
+    "luyen"
+   ]
+  ],
+  "analysis": [
+   [
+    "The",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "driver"
+   ],
+   [
+    "driver",
+    "driver",
+    "NOUN",
+    "NN",
+    "poss",
+    "bus"
+   ],
+   [
+    "'s",
+    "'s",
+    "PART",
+    "POS",
+    "case",
+    "driver"
+   ],
+   [
+    "bus",
+    "bus",
+    "NOUN",
+    "NN",
+    "nsubj",
+    "is"
+   ],
+   [
+    "is",
+    "be",
+    "AUX",
+    "VBZ",
+    "ROOT",
+    "is"
+   ],
+   [
+    "at",
+    "at",
+    "ADP",
+    "IN",
+    "prep",
+    "is"
+   ],
+   [
+    "the",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "hospital"
+   ],
+   [
+    "hospital",
+    "hospital",
+    "NOUN",
+    "NN",
+    "pobj",
+    "at"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "is"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.371,
+    "id": "GOL-000439",
+    "mwaghavul": "Nɨghɨn fɨri a n’lutuk.",
+    "english": "His mother is at the market.",
+    "ref": "486"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.362,
+    "id": "GOL-000438",
+    "mwaghavul": "Nɨghɨn fɨra a n’lutuk.",
+    "english": "Her mother is at the market.",
+    "ref": "485"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.266,
+    "id": "GOL-000372",
+    "mwaghavul": "Ɨn man nne ri a n’lu.",
+    "english": "I know that he is at home.",
+    "ref": "418"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.247,
+    "id": "SIL-007147",
+    "mwaghavul": "Ɗak ni a sɨghɨt ni.",
+    "english": "The work is at completion stage.",
+    "ref": "MW04784#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.239,
+    "id": "SIL-006997",
+    "mwaghavul": "Lu fɨna ni a nsarler kɨ mee luyen.",
+    "english": "My house is opposite a hospital.",
+    "ref": "MW03707#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.33,
+    "id": "BRO-010419",
+    "mwaghavul": "Yaksɨ ɓe wuriì tong a n’sarse kɨ̀ Naan",
+    "english": "who is at the right hand of God",
+    "ref": "1 Peter 3:22"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.268,
+    "id": "BRO-013885",
+    "mwaghavul": "teer ni mo kɨ jì wul",
+    "english": "The time is at hand",
+    "ref": "Luke 21:8"
+   }
+  ],
+  "id": "M02"
+ },
+ {
+  "input": "Where did your sister buy the television?",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Ɗyemnɨghɨn fwagha seet shinaakɨr ni a nnee ’e?",
+  "flags": [
+   "KINSHIP:sister"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English do-support → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.862, n=29)"
+   },
+   {
+    "rule": "possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]",
+    "tier": "GOLD",
+    "detail": "your→fwagha (poss: HEAD_BEFORE_DEP); never independent mɨ- series"
+   },
+   {
+    "rule": "valency frame for 'seet': O+S → S V O",
+    "tier": "GOLD",
+    "detail": "n=10"
+   },
+   {
+    "rule": "adverbial wh: S V … a WH ’e",
+    "tier": "GOLD",
+    "detail": "where"
+   }
+  ],
+  "lex_trace": [
+   [
+    "sister",
+    "BRONZE",
+    "ɗyemnɨghɨn"
+   ],
+   [
+    "buy",
+    "GOLD",
+    "seet (alts: sɨrep)"
+   ],
+   [
+    "television",
+    "GOLD",
+    "shinaakɨr"
+   ]
+  ],
+  "analysis": [
+   [
+    "Where",
+    "where",
+    "SCONJ",
+    "WRB",
+    "advmod",
+    "buy"
+   ],
+   [
+    "did",
+    "do",
+    "AUX",
+    "VBD",
+    "aux",
+    "buy"
+   ],
+   [
+    "your",
+    "your",
+    "PRON",
+    "PRP$",
+    "poss",
+    "sister"
+   ],
+   [
+    "sister",
+    "sister",
+    "NOUN",
+    "NN",
+    "nsubj",
+    "buy"
+   ],
+   [
+    "buy",
+    "buy",
+    "VERB",
+    "VB",
+    "ROOT",
+    "buy"
+   ],
+   [
+    "the",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "television"
+   ],
+   [
+    "television",
+    "television",
+    "NOUN",
+    "NN",
+    "dobj",
+    "buy"
+   ],
+   [
+    "?",
+    "?",
+    "PUNCT",
+    ".",
+    "punct",
+    "buy"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.32,
+    "id": "GOL-000150",
+    "mwaghavul": "Ri so a nnee ’e?",
+    "english": "Where did he go?",
+    "ref": "135"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.284,
+    "id": "GOL-000220",
+    "mwaghavul": "A naa ri a nnee ’e? — Ɨn naa ri a n’lutuk.",
+    "english": "Where did you see him? — At the market.",
+    "ref": "S6"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.233,
+    "id": "GOL-000148",
+    "mwaghavul": "A seet a me ’e?",
+    "english": "What did you buy?",
+    "ref": "134.1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.155,
+    "id": "SIL-006464",
+    "mwaghavul": "Daar an n’so seet cuk shit n’lutuk.",
+    "english": "Tomorrow I shall buy a grass knife.",
+    "ref": "MW00615#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.153,
+    "id": "SIL-006618",
+    "mwaghavul": "A pèt naaweel fwagha ng’an wa.",
+    "english": "Call your younger sister for me, please.",
+    "ref": "MW03093#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.187,
+    "id": "BRO-015451",
+    "mwaghavul": "Cirang ɗang shit ɗiibish ni kàa ɗí zak ye",
+    "english": "Where did these darnel weeds come from",
+    "ref": "Matthew 13:27"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.148,
+    "id": "BRO-014022",
+    "mwaghavul": "kɨ ɗyemnɨghɨn fɨri ɗiimat",
+    "english": "and his sister",
+    "ref": "Romans 16:15"
+   }
+  ],
+  "id": "M03"
+ },
+ {
+  "input": "His wife is not at the market.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Ba mat fɨri a n’lutuk kas.",
+  "flags": [
+   "KINSHIP:wife"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English simple_present → ∅",
+    "tier": "GOLD",
+    "detail": "top_marker=<none> (share=0.592, n=49)"
+   },
+   {
+    "rule": "possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]",
+    "tier": "GOLD",
+    "detail": "his→fɨri (poss: HEAD_BEFORE_DEP); never independent mɨ- series"
+   },
+   {
+    "rule": "locative definiteness: suppress trailing ni after n’",
+    "tier": "GOLD",
+    "detail": "lutuk: no ni"
+   },
+   {
+    "rule": "preposition 'at' → n’",
+    "tier": "GOLD",
+    "detail": "prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic"
+   },
+   {
+    "rule": "locative predicate: S a n’+NP (COP a)",
+    "tier": "GOLD",
+    "detail": ""
+   },
+   {
+    "rule": "negation: ba … kas",
+    "tier": "GOLD",
+    "detail": "clause-final kas"
+   }
+  ],
+  "lex_trace": [
+   [
+    "wife",
+    "GOLD",
+    "mat (alts: matkáa, matpóo)"
+   ],
+   [
+    "market",
+    "GOLD",
+    "lutuk"
+   ]
+  ],
+  "analysis": [
+   [
+    "His",
+    "his",
+    "PRON",
+    "PRP$",
+    "poss",
+    "wife"
+   ],
+   [
+    "wife",
+    "wife",
+    "NOUN",
+    "NN",
+    "nsubj",
+    "is"
+   ],
+   [
+    "is",
+    "be",
+    "AUX",
+    "VBZ",
+    "ROOT",
+    "is"
+   ],
+   [
+    "not",
+    "not",
+    "PART",
+    "RB",
+    "neg",
+    "is"
+   ],
+   [
+    "at",
+    "at",
+    "ADP",
+    "IN",
+    "prep",
+    "is"
+   ],
+   [
+    "the",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "market"
+   ],
+   [
+    "market",
+    "market",
+    "NOUN",
+    "NN",
+    "pobj",
+    "at"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "is"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.361,
+    "id": "GOL-000439",
+    "mwaghavul": "Nɨghɨn fɨri a n’lutuk.",
+    "english": "His mother is at the market.",
+    "ref": "486"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.333,
+    "id": "GOL-000219",
+    "mwaghavul": "Ɨn naa ri n’lutuk.",
+    "english": "I saw him at the market.",
+    "ref": "S5"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.331,
+    "id": "GOL-000438",
+    "mwaghavul": "Nɨghɨn fɨra a n’lutuk.",
+    "english": "Her mother is at the market.",
+    "ref": "485"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.229,
+    "id": "SIL-006529",
+    "mwaghavul": "Gwar ni cin shaghal m’mat fɨri.",
+    "english": "The man gave money to his wife.",
+    "ref": "MW00567#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.189,
+    "id": "SIL-006672",
+    "mwaghavul": "Gwar ni ri naa a n’nas mat fɨri.",
+    "english": "The man often beats up his wife.",
+    "ref": "MW03061#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.281,
+    "id": "BRO-017013",
+    "mwaghavul": "kɨ mat fɨri",
+    "english": "with his wife",
+    "ref": "Matthew 18:25"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.183,
+    "id": "BRO-016866",
+    "mwaghavul": "wuri yit matkáa ni pe ɗyemnɨghɨn fɨri ɗi",
+    "english": "left his wife to his brother",
+    "ref": "Matthew 22:25"
+   }
+  ],
+  "id": "M04"
+ },
+ {
+  "input": "The girl is charging a phone at the school.",
+  "lang": "en",
+  "direction": "EN→MW",
+  "draft": "Girl ni nkaa kurum fon n’tangman.",
+  "flags": [
+   "NOUN_LOAN:girl",
+   "LOANWORD:phone→fon"
+  ],
+  "rules": [
+   {
+    "rule": "TAM: English progressive → nkaa",
+    "tier": "GOLD",
+    "detail": "top_marker=nkaa (share=0.746, n=63)"
+   },
+   {
+    "rule": "valency frame for 'kurum': O → V O",
+    "tier": "BRONZE",
+    "detail": "n=31"
+   },
+   {
+    "rule": "locative definiteness: suppress trailing ni after n’",
+    "tier": "GOLD",
+    "detail": "tangman: no ni"
+   },
+   {
+    "rule": "preposition 'at' → n’",
+    "tier": "GOLD",
+    "detail": "prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic"
+   }
+  ],
+  "lex_trace": [
+   [
+    "girl",
+    "NOUN_LOAN",
+    "girl"
+   ],
+   [
+    "charge",
+    "GOLD",
+    "kurum"
+   ],
+   [
+    "phone",
+    "LOANWORD",
+    "fon"
+   ],
+   [
+    "school",
+    "GOLD",
+    "tangman (alts: peetangman)"
+   ]
+  ],
+  "analysis": [
+   [
+    "The",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "girl"
+   ],
+   [
+    "girl",
+    "girl",
+    "NOUN",
+    "NN",
+    "nsubj",
+    "charging"
+   ],
+   [
+    "is",
+    "be",
+    "AUX",
+    "VBZ",
+    "aux",
+    "charging"
+   ],
+   [
+    "charging",
+    "charge",
+    "VERB",
+    "VBG",
+    "ROOT",
+    "charging"
+   ],
+   [
+    "a",
+    "a",
+    "DET",
+    "DT",
+    "det",
+    "phone"
+   ],
+   [
+    "phone",
+    "phone",
+    "NOUN",
+    "NN",
+    "dobj",
+    "charging"
+   ],
+   [
+    "at",
+    "at",
+    "ADP",
+    "IN",
+    "prep",
+    "charging"
+   ],
+   [
+    "the",
+    "the",
+    "DET",
+    "DT",
+    "det",
+    "school"
+   ],
+   [
+    "school",
+    "school",
+    "NOUN",
+    "NN",
+    "pobj",
+    "at"
+   ],
+   [
+    ".",
+    ".",
+    "PUNCT",
+    ".",
+    "punct",
+    "charging"
+   ]
+  ],
+  "examples": [
+   {
+    "tier": "GOLD",
+    "score": 0.195,
+    "id": "GOL-000439",
+    "mwaghavul": "Nɨghɨn fɨri a n’lutuk.",
+    "english": "His mother is at the market.",
+    "ref": "486"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.192,
+    "id": "GOL-000438",
+    "mwaghavul": "Nɨghɨn fɨra a n’lutuk.",
+    "english": "Her mother is at the market.",
+    "ref": "485"
+   },
+   {
+    "tier": "GOLD",
+    "score": 0.188,
+    "id": "GOL-000593",
+    "mwaghavul": "…làa ɗii-mish kɨ laareep.",
+    "english": "…a boy and a girl.",
+    "ref": "R4"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.373,
+    "id": "SIL-006486",
+    "mwaghavul": "Laareep ni wura fès weel zam.",
+    "english": "The girl is very slim.",
+    "ref": "MW05403#1"
+   },
+   {
+    "tier": "SILVER",
+    "score": 0.282,
+    "id": "SIL-006852",
+    "mwaghavul": "Laareep wura nkaa aar tughul kúrásh-kúrásh.",
+    "english": "The girl is scraping the pot kúrásh-kúrásh.",
+    "ref": "MW02038#1"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.245,
+    "id": "BRO-016101",
+    "mwaghavul": "ɓe laareep ni wura yaghal ating",
+    "english": "and the girl arose",
+    "ref": "Matthew 9:25"
+   },
+   {
+    "tier": "BRONZE",
+    "score": 0.2,
+    "id": "BRO-014330",
+    "mwaghavul": "Abet ɓe reep ni wura yaghal ɗar",
+    "english": "Immediately the girl rose up",
+    "ref": "Mark 5:42"
+   }
+  ],
+  "id": "M05"
+ }
+]

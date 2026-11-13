@@ -1,0 +1,314 @@
+RAG index: 26510 of 26534 records kept (24 removed: held-out clusters + near-duplicates)
+closed-class entries dropped (no attestation outside held-out clusters): none
+  audit H01: max source-side Jaccard of any retrieved example = 0.60
+  audit H02: max source-side Jaccard of any retrieved example = 0.33
+  audit H03: max source-side Jaccard of any retrieved example = 0.33
+  audit H04: max source-side Jaccard of any retrieved example = 0.67
+  audit H05: max source-side Jaccard of any retrieved example = 0.29
+  audit H06: max source-side Jaccard of any retrieved example = 0.33
+  audit H07: max source-side Jaccard of any retrieved example = 0.40
+  audit H08: max source-side Jaccard of any retrieved example = 0.25
+  audit H09: max source-side Jaccard of any retrieved example = 0.30
+  audit H10: max source-side Jaccard of any retrieved example = 0.40
+leak assertion passed: no held-out/sibling row appears in any retrieved example list
+
+=== EN→MW  |  He is eating groundnut.
+RBMT symbolic draft : Ri nkaa se [groundnut].
+OOV/Loanword flags  : ['OOV:groundnut']
+Lexical lookup      :
+   [CLOSED  ] He → ri
+   [GOLD    ] eat → se (alts: pòo tung kom yoghon)
+   [OOV     ] groundnut → [groundnut]
+Retrieved rules     :
+   [GOLD] TAM: English progressive → nkaa  top_marker=nkaa (share=0.746, n=63)
+   [GOLD] valency frame for 'se': O+S → S V O  n=40
+RAG examples        :
+   [GOLD   0.52] Ri pu se kóm nɗi ɨn jì wul.  ||  He was eating groundnut when I arrived.
+   [GOLD   0.46] Ɗí ri ’í se kóm m’ɓit ɗí mo ’ó ɗel.  ||  He used to eat groundnut, years ago.
+   [GOLD   0.39] Ba ri nkaa se kas. ~ Ba ri pu se kas.  ||  He is not eating.
+   [SILVER 0.29] Ri a ciiwurang.  ||  He is a midget.
+   [SILVER 0.27] Mo kɨ ɗak bangkur a shi kóm.  ||  Groundnut cakes are made from groundnuts.
+   [BRONZE 0.20] Làa ni kɨ̀ mùut  ||  He is dead
+   [BRONZE 0.18] wuɗi a nɗɨghɨn peeɓang ni  ||  he is in the light
+
+=== EN→MW  |  They praised themselves.
+RBMT symbolic draft : Mo kwoop themselves.
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [CLOSED  ] They → mo
+   [GOLD    ] praise → kwoop
+   [CLOSED  ] themselves → themselves
+Retrieved rules     :
+   [GOLD] TAM: English simple_past → ∅  top_marker=<none> (share=0.974, n=271)
+   [BRONZE] valency frame for 'kwoop': O → V O  n=43
+RAG examples        :
+   [GOLD   0.18] Mo man an.  ||  They know me.
+   [GOLD   0.17] Mo naa sut.  ||  They saw each other.
+   [GOLD   0.16] Mumun se doghon.  ||  We (they and I) ate yesterday.
+   [SILVER 0.14] A nook ɗar atɨ̀leng kɨ mbii ɗi n’nyee mo nkaa cìn mpèe ɓam sut.  ||  Don’t stand apart when others are doing something to help themselves.
+   [SILVER 0.14] N’tar kut ɓe nyem nan mo kɨ aghat sut a wus.  ||  During the harmattan elderly people warm themselves up by the fire.
+   [BRONZE 0.47] sut furu  ||  themselves
+   [BRONZE 0.47] mo mmusut  ||  themselves
+
+=== EN→MW  |  He left three days ago.
+RBMT symbolic draft : Ri ɗee [ago].
+OOV/Loanword flags  : ['OOV:ago']
+Lexical lookup      :
+   [CLOSED  ] He → ri
+   [GOLD    ] leave → ɗee (alts: yit, ɗel)
+   [OOV     ] ago → [ago]
+Retrieved rules     :
+   [GOLD] TAM: English simple_past → ∅  top_marker=<none> (share=0.974, n=271)
+   [GOLD] valency frame for 'ɗee': S → S V  n=6
+RAG examples        :
+   [GOLD   0.38] Doghon ri ɗel so.  ||  Yesterday he left.
+   [GOLD   0.34] Ɨn tong m’pee mɨni teer kun.  ||  I stayed there for three days.
+   [GOLD   0.24] Ɗí ri ’í se kóm ji. ~ … ji-ji.  ||  He ate groundnut long ago.
+   [SILVER 0.30] Ri so nɗin n’sat ɗangmukaat.  ||  He left without saying goodbye.
+   [SILVER 0.19] Ngukwat ni kɨ às kwàt mo kun.  ||  The hunter has three hounds.
+   [BRONZE 0.34] nɗɨghɨn shiiteer mo kun  ||  in three days
+   [BRONZE 0.27] Ɓe parpuus ɗiikún  ||  and after three days
+
+=== EN→MW  |  The soup is too hot.
+RBMT symbolic draft : Pùk ni ɗiital.
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] soup → pùk (alts: pùk mumwish, pùk muwish)
+   [GOLD    ] hot → ɗiital
+Retrieved rules     :
+   [GOLD] TAM: English simple_present → ∅  top_marker=<none> (share=0.592, n=49)
+   [GOLD] predicate adjective: stative verb, no copula  S ADJ
+RAG examples        :
+   [GOLD   0.46] Pee ni gyar tal mu cìn ɗak cicin.  ||  It is too hot to work today.
+   [GOLD   0.29] Ra tung pùk ni lee-lee.  ||  She stirred the soup slowly.
+   [GOLD   0.21] Koo mee lu ɗiiɗang ’e gyar kùs zam.  ||  Every house is far too big.
+   [SILVER 0.47] Puus ni gyar ɓaan.  ||  The sun is too hot.
+   [SILVER 0.32] Wáar ni tal cii mwak.  ||  The cereal beverage is too hot to drink.
+   [BRONZE 0.15] koo ɗiital  ||  or hot
+   [BRONZE 0.05] Ni aasɨ nɗɨghɨn pee ɗiisɨ  ||  Even so too at this present time
+
+=== EN→MW  |  They asked if we would help them.
+RBMT symbolic draft : Mo nang mun ɓam mo.
+OOV/Loanword flags  : ['MODAL_UNMAPPED:would', 'AMBIG:we→mun (incl.)|mumun (excl.)']
+Lexical lookup      :
+   [CLOSED  ] They → mo
+   [GOLD    ] ask → nang (alts: ɗang, tangpee)
+   [CLOSED  ] we → mun
+   [GOLD    ] help → ɓam (alts: ɓáan)
+   [CLOSED  ] them → mo
+Retrieved rules     :
+   [GOLD] TAM: English simple_past → ∅  top_marker=<none> (share=0.974, n=271)
+   [TIER_4_GENERALIZED] valency (no verb-specific frame): default arg structure  O+S → S V O
+   [GOLD] TAM: English modal → ∅  top_marker=<none> (share=0.391, n=23)
+   [GOLD] valency frame for 'ɓam': O+S → S V O  n=4
+RAG examples        :
+   [GOLD   0.22] Ri ɓam an mang lée ni.  ||  He helped me carry the load.
+   [GOLD   0.18] Kàt ɗí ri kɨling neen ɓe ri n’sese.  ||  He would eat if he were hungry.
+   [GOLD   0.18] Mu ɓam ri.  ||  We (incl.) should help him.
+   [SILVER 0.20] Mu pɨlang ɓáan ni.  ||  We appreciate the help.
+   [SILVER 0.19] A ɓam an wa?  ||  Will you help me?
+   [BRONZE 0.34] Katɗang mun  ||  If we
+   [BRONZE 0.28] mpeeku mo jì ɓam mo ɗi  ||  that they should come and help them
+
+=== MW→EN  |  Lu ɗiilee.
+RBMT symbolic draft : little house
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] Lu → house
+   [GOLD    ] ɗiilee → little
+Retrieved rules     :
+   [GOLD] NP reorder: N ADJ/DEM/POSS/DEF → DET/POSS ADJ N  Lu ɗiilee
+RAG examples        :
+   [GOLD   0.33] Lù ni.  ||  the building (the structure)
+   [GOLD   0.18] Mo ɗik lu ni.  ||  They built the house.
+   [GOLD   0.18] Lu mɨni a lu ’ù puun fɨna.  ||  That is my father’s house.
+   [SILVER 0.18] A ndòk ɗiilee a ɗoo ɗiivùl.  ||  Ndòk ɗiilee is the second pitch.
+   [SILVER 0.18] A ruruu ɗiilee a ɗoo ɗiikún.  ||  Ruruu ɗiilee is the third pitch.
+   [BRONZE 0.35] ɗiilee met  ||  least
+   [BRONZE 0.33] Lang ɗiilee  ||  After a little
+
+=== MW→EN  |  Ɨn naa ni.
+RBMT symbolic draft : I see it
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] Ɨn → I
+   [GOLD    ] naa → see  [homographs: V:see, PREF:respect prefix applied to the name of a younger woman, N:mother, N:reference to any woman]
+   [GOLD    ] ni → DEF
+Retrieved rules     :
+RAG examples        :
+   [GOLD   0.39] Ɨn naa ri m’pesɨ.  ||  I saw him there.
+   [GOLD   0.39] Ɨn naa ri m’pesɨ̀.  ||  I saw him here.
+   [GOLD   0.38] Ɨn naa ri n’lutuk.  ||  I saw him at the market.
+   [SILVER 0.30] Nàá ni ret zam.  ||  The woman is good.
+   [SILVER 0.07] Naa, wát ni m’pesɨ!  ||  Look, there is the thief!
+   [BRONZE 0.27] wuri kɨ naa ni  ||  He saw it
+   [BRONZE 0.25] amma ba wún m’mak naa ni kas  ||  and you will not see it
+
+=== MW→EN  |  Ri nɨram ri, nɨram ri, nɨram ri.
+RBMT symbolic draft : he hit he hit he hit he
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] Ri → he
+   [GOLD    ] nɨram → hit
+   [GOLD    ] ri → he
+   [GOLD    ] nɨram → hit
+   [GOLD    ] ri → he
+   [GOLD    ] nɨram → hit
+   [GOLD    ] ri → he
+Retrieved rules     :
+RAG examples        :
+   [GOLD   0.28] Làa ni nɨram as ni.  ||  The child hit the dog repeatedly.
+   [GOLD   0.23] Làa ni nɨram as ni mo mɨndong-mɨndong.  ||  The child hit the dogs one by one.
+   [GOLD   0.18] Mu ɓam ri.  ||  We (incl.) should help him.
+   [SILVER 0.20] Ri cut ra n’kɨpak.  ||  He hit her on the cheek.
+   [SILVER 0.19] Ri zaghat kam n’ra.  ||  He hit her with a long stick.
+   [BRONZE 0.35] Mo nɨram wuri  ||  and beat him
+   [BRONZE 0.21] Doghon mo kɨ̀ nɨram mun agaak  ||  They have beaten us publicly
+
+=== MW→EN  |  Ɨn naa san a n’ɗɨghɨn àm.
+RBMT symbolic draft : I see my body is at/in/to pen water
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] Ɨn → I
+   [GOLD    ] naa → see  [homographs: V:see, PREF:respect prefix applied to the name of a younger woman, N:mother, N:reference to any woman]
+   [GOLD    ] san → my body  [homographs: N:my body, V:accidentally pour liquid away or on someone, PRON:myself]
+   [GOLD    ] a → is
+   [GOLD    ] n’ɗɨghɨn → pen
+   [GOLD    ] àm → water  [homographs: V:peel, N:water, N:applied to any sort of drink when in conversation at a festival]
+Retrieved rules     :
+RAG examples        :
+   [GOLD   0.25] Làa ni a n’ɗɨghɨn lu ni.  ||  The child is in the house.
+   [GOLD   0.24] Ɨn naa nne àm ni kɨ̀ kyes.  ||  I saw that the water was finished.
+   [GOLD   0.23] Ɗáng mishkagham ni ri naa shin n’ɗɨghɨn àm ni.  ||  The chief saw himself in the water.
+   [SILVER 0.06] Àm ni a dɨɓen.  ||  Water the is little.
+   [SILVER 0.06] Àm ni a ɓúl-ɓúl.  ||  The water is lukewarm.
+   [BRONZE 0.17] a san fɨna  ||  is my body
+   [BRONZE 0.16] ni a san fɨna  ||  This is my body
+
+=== MW→EN  |  Ɗak ’ɨ̀ gwar shwal.
+RBMT symbolic draft : man ’s work hard
+OOV/Loanword flags  : —
+Lexical lookup      :
+   [GOLD    ] Ɗak → work  [homographs: V:prepare, V:work, ADV:only, ADJ:only, N:work]
+   [GOLD    ] ’ɨ̀ → ’s(GEN)
+   [GOLD    ] gwar → man
+   [GOLD    ] shwal → hard  [homographs: V:be long, N:hard]
+Retrieved rules     :
+   [GOLD] Noun GEN Noun2 → Noun2’s Noun (HEAD_BEFORE_DEP reversed)  Ɗak ’ɨ̀ gwar
+   [GOLD] NP reorder: N ADJ/DEM/POSS/DEF → DET/POSS ADJ N  Ɗak ’ɨ̀ gwar
+RAG examples        :
+   [GOLD   0.37] Dang ’ɨ̀ as ni shwàl.  ||  The dog’s tail is long.
+   [GOLD   0.35] Ɗak ni shwal.  ||  The work is hard.
+   [GOLD   0.30] Jì shwàl.  ||  Coming is difficult.
+   [SILVER 0.25] Mishkagham ’ɨ̀ so.  ||  The chief has gone.
+   [SILVER 0.23] Cicet shwal.  ||  Cooking is challenging.
+   [BRONZE 0.28] kɨ shwal  ||  length and
+   [BRONZE 0.21] kɨ shi shwal  ||  with death
+
+=== EN→MW  |  It was her father who repaired the radio.
+RBMT symbolic draft : A puun fɨra ɗak shìkɨ̀lìng ni.
+OOV/Loanword flags  : ['KINSHIP:father']
+Lexical lookup      :
+   [GOLD    ] father → puun (alts: daa, láa)
+   [GOLD    ] repair → ɗak (alts: lus, lwas)
+   [GOLD    ] radio → shìkɨ̀lìng
+Retrieved rules     :
+   [GOLD] it-cleft: strip dummy 'it', front copula 'a' (FOC), no mɨni  FOC a + focus + clause (subject-focus: clause subject gap)
+   [GOLD] possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]  her→fɨra (poss: HEAD_BEFORE_DEP); never independent mɨ- series
+   [GOLD] TAM: English simple_past → ∅  top_marker=<none> (share=0.974, n=271)
+   [GOLD] valency frame for 'ɗak': S → S V  n=9
+RAG examples        :
+   [GOLD   0.34] Mo nkaa ɗak poolu ni.  ||  They are repairing the door.
+   [GOLD   0.33] Puun fɨra a ngumaar.  ||  Her father is a farmer.
+   [GOLD   0.32] Ngumaar ni ɗak caan ɗii-tep ni.  ||  The farmer repaired the broken hoe.
+   [SILVER 0.29] Puun fɨra a daaslek.  ||  Her father is a soldier.
+   [SILVER 0.27] A àak daas tu puun fɨra.  ||  It was cirrhosis that killed her father.
+   [BRONZE 0.19] puun fɨna ɗí wuri  ||  my Father who is
+   [BRONZE 0.18] Mo sat n’wura nne  ||  it was said to her
+
+=== EN→MW  |  The driver's bus is at the hospital.
+RBMT symbolic draft : Bas ’ɨ̀ ngu tung nɨsogho ni a n’luyen.
+OOV/Loanword flags  : ['LOANWORD:bus→bas', 'GEN_ALLOMORPH_GUESS:’ɨ̀']
+Lexical lookup      :
+   [LOANWORD] bus → bas
+   [GOLD    ] driver → ngu tung nɨsogho
+   [GOLD    ] hospital → luyen
+Retrieved rules     :
+   [GOLD] TAM: English simple_present → ∅  top_marker=<none> (share=0.592, n=49)
+   [GOLD] Noun's Noun2 → HEAD_BEFORE_DEP (head + GEN + possessor)  poss HEAD_BEFORE_DEP (n=57); GEN allomorph guess ’ɨ̀
+   [GOLD] locative definiteness: suppress trailing ni after n’  luyen: no ni
+   [GOLD] preposition 'at' → n’  prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic
+   [GOLD] locative predicate: S a n’+NP (COP a)  
+RAG examples        :
+   [GOLD   0.37] Nɨghɨn fɨri a n’lutuk.  ||  His mother is at the market.
+   [GOLD   0.36] Nɨghɨn fɨra a n’lutuk.  ||  Her mother is at the market.
+   [GOLD   0.27] Ɨn man nne ri a n’lu.  ||  I know that he is at home.
+   [SILVER 0.25] Ɗak ni a sɨghɨt ni.  ||  The work is at completion stage.
+   [SILVER 0.24] Lu fɨna ni a nsarler kɨ mee luyen.  ||  My house is opposite a hospital.
+   [BRONZE 0.33] Yaksɨ ɓe wuriì tong a n’sarse kɨ̀ Naan  ||  who is at the right hand of God
+   [BRONZE 0.27] teer ni mo kɨ jì wul  ||  The time is at hand
+
+=== EN→MW  |  Where did your sister buy the television?
+RBMT symbolic draft : Ɗyemnɨghɨn fwagha seet shinaakɨr ni a nnee ’e?
+OOV/Loanword flags  : ['KINSHIP:sister']
+Lexical lookup      :
+   [BRONZE  ] sister → ɗyemnɨghɨn
+   [GOLD    ] buy → seet (alts: sɨrep)
+   [GOLD    ] television → shinaakɨr
+Retrieved rules     :
+   [GOLD] TAM: English do-support → ∅  top_marker=<none> (share=0.862, n=29)
+   [GOLD] possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]  your→fwagha (poss: HEAD_BEFORE_DEP); never independent mɨ- series
+   [GOLD] valency frame for 'seet': O+S → S V O  n=10
+   [GOLD] adverbial wh: S V … a WH ’e  where
+RAG examples        :
+   [GOLD   0.32] Ri so a nnee ’e?  ||  Where did he go?
+   [GOLD   0.28] A naa ri a nnee ’e? — Ɨn naa ri a n’lutuk.  ||  Where did you see him? — At the market.
+   [GOLD   0.23] A seet a me ’e?  ||  What did you buy?
+   [SILVER 0.15] Daar an n’so seet cuk shit n’lutuk.  ||  Tomorrow I shall buy a grass knife.
+   [SILVER 0.15] A pèt naaweel fwagha ng’an wa.  ||  Call your younger sister for me, please.
+   [BRONZE 0.19] Cirang ɗang shit ɗiibish ni kàa ɗí zak ye  ||  Where did these darnel weeds come from
+   [BRONZE 0.15] kɨ ɗyemnɨghɨn fɨri ɗiimat  ||  and his sister
+
+=== EN→MW  |  His wife is not at the market.
+RBMT symbolic draft : Ba mat fɨri a n’lutuk kas.
+OOV/Loanword flags  : ['KINSHIP:wife']
+Lexical lookup      :
+   [GOLD    ] wife → mat (alts: matkáa, matpóo)
+   [GOLD    ] market → lutuk
+Retrieved rules     :
+   [GOLD] TAM: English simple_present → ∅  top_marker=<none> (share=0.592, n=49)
+   [GOLD] possessive pronoun (attributive fɨ- series) [KINSHIP inalienable]  his→fɨri (poss: HEAD_BEFORE_DEP); never independent mɨ- series
+   [GOLD] locative definiteness: suppress trailing ni after n’  lutuk: no ni
+   [GOLD] preposition 'at' → n’  prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic
+   [GOLD] locative predicate: S a n’+NP (COP a)  
+   [GOLD] negation: ba … kas  clause-final kas
+RAG examples        :
+   [GOLD   0.36] Nɨghɨn fɨri a n’lutuk.  ||  His mother is at the market.
+   [GOLD   0.33] Ɨn naa ri n’lutuk.  ||  I saw him at the market.
+   [GOLD   0.33] Nɨghɨn fɨra a n’lutuk.  ||  Her mother is at the market.
+   [SILVER 0.23] Gwar ni cin shaghal m’mat fɨri.  ||  The man gave money to his wife.
+   [SILVER 0.19] Gwar ni ri naa a n’nas mat fɨri.  ||  The man often beats up his wife.
+   [BRONZE 0.28] kɨ mat fɨri  ||  with his wife
+   [BRONZE 0.18] wuri yit matkáa ni pe ɗyemnɨghɨn fɨri ɗi  ||  left his wife to his brother
+
+=== EN→MW  |  The girl is charging a phone at the school.
+RBMT symbolic draft : Girl ni nkaa kurum fon n’tangman.
+OOV/Loanword flags  : ['NOUN_LOAN:girl', 'LOANWORD:phone→fon']
+Lexical lookup      :
+   [NOUN_LOAN] girl → girl
+   [GOLD    ] charge → kurum
+   [LOANWORD] phone → fon
+   [GOLD    ] school → tangman (alts: peetangman)
+Retrieved rules     :
+   [GOLD] TAM: English progressive → nkaa  top_marker=nkaa (share=0.746, n=63)
+   [BRONZE] valency frame for 'kurum': O → V O  n=31
+   [GOLD] locative definiteness: suppress trailing ni after n’  tangman: no ni
+   [GOLD] preposition 'at' → n’  prep HEAD_BEFORE_DEP (n=92, share=0.946) fused clitic
+RAG examples        :
+   [GOLD   0.20] Nɨghɨn fɨri a n’lutuk.  ||  His mother is at the market.
+   [GOLD   0.19] Nɨghɨn fɨra a n’lutuk.  ||  Her mother is at the market.
+   [GOLD   0.19] …làa ɗii-mish kɨ laareep.  ||  …a boy and a girl.
+   [SILVER 0.37] Laareep ni wura fès weel zam.  ||  The girl is very slim.
+   [SILVER 0.28] Laareep wura nkaa aar tughul kúrásh-kúrásh.  ||  The girl is scraping the pot kúrásh-kúrásh.
+   [BRONZE 0.24] ɓe laareep ni wura yaghal ating  ||  and the girl arose
+   [BRONZE 0.20] Abet ɓe reep ni wura yaghal ɗar  ||  Immediately the girl rose up

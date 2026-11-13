@@ -1,0 +1,302 @@
+[
+ {
+  "id": "H01",
+  "dir": "EN→MW",
+  "system": "Pure RBMT",
+  "hyp": "Ri nkaa se [groundnut].",
+  "ref": "Ri nkaa se kóm.",
+  "chrf": 54.28212947015795,
+  "bleu": 26.269098944241588,
+  "chrf_ns": 58.049884863582854
+ },
+ {
+  "id": "H01",
+  "dir": "EN→MW",
+  "system": "Zero-Shot LLM",
+  "hyp": "Ri nkaa se akuɗang.",
+  "ref": "Ri nkaa se kóm.",
+  "chrf": 57.52433203807523,
+  "bleu": 42.7287006396234,
+  "chrf_ns": 62.412256852346545
+ },
+ {
+  "id": "H01",
+  "dir": "EN→MW",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "Ri nkaa se kóm.",
+  "ref": "Ri nkaa se kóm.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H02",
+  "dir": "EN→MW",
+  "system": "Pure RBMT",
+  "hyp": "Mo kwoop themselves.",
+  "ref": "Mo kwoop sut.",
+  "chrf": 50.10863065812954,
+  "bleu": 35.35533905932737,
+  "chrf_ns": 54.24978411703866
+ },
+ {
+  "id": "H02",
+  "dir": "EN→MW",
+  "system": "Zero-Shot LLM",
+  "hyp": "Mo kwat mo.",
+  "ref": "Mo kwoop sut.",
+  "chrf": 22.99741586366134,
+  "bleu": 18.99589214128981,
+  "chrf_ns": 21.55714602560114
+ },
+ {
+  "id": "H02",
+  "dir": "EN→MW",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "Mo kwoop sut furu.",
+  "ref": "Mo kwoop sut.",
+  "chrf": 80.8586410417289,
+  "bleu": 42.7287006396234,
+  "chrf_ns": 90.6680459405675
+ },
+ {
+  "id": "H03",
+  "dir": "EN→MW",
+  "system": "Pure RBMT",
+  "hyp": "Ri ɗee [ago].",
+  "ref": "Ri ɗel so a m’puus ɗii-kun ɗi ni ɗel.",
+  "chrf": 9.945261417652041,
+  "bleu": 4.955725306405571,
+  "chrf_ns": 8.702550859626697
+ },
+ {
+  "id": "H03",
+  "dir": "EN→MW",
+  "system": "Zero-Shot LLM",
+  "hyp": "Ri so puus kwal doghon.",
+  "ref": "Ri ɗel so a m’puus ɗii-kun ɗi ni ɗel.",
+  "chrf": 14.021625193916531,
+  "bleu": 5.484411595600381,
+  "chrf_ns": 13.232813936117807
+ },
+ {
+  "id": "H03",
+  "dir": "EN→MW",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "Teer kun ri ɗel so.",
+  "ref": "Ri ɗel so a m’puus ɗii-kun ɗi ni ɗel.",
+  "chrf": 20.255029777779118,
+  "bleu": 9.22364410103253,
+  "chrf_ns": 26.78224474668337
+ },
+ {
+  "id": "H04",
+  "dir": "EN→MW",
+  "system": "Pure RBMT",
+  "hyp": "Pùk ni ɗiital.",
+  "ref": "Pùk ni gyar tal.",
+  "chrf": 38.36886219608411,
+  "bleu": 27.534765745159184,
+  "chrf_ns": 36.07491115345215
+ },
+ {
+  "id": "H04",
+  "dir": "EN→MW",
+  "system": "Zero-Shot LLM",
+  "hyp": "Cèt ni wuɗi zam.",
+  "ref": "Pùk ni gyar tal.",
+  "chrf": 10.849358974358974,
+  "bleu": 12.70331870386537,
+  "chrf_ns": 9.469696969696969
+ },
+ {
+  "id": "H04",
+  "dir": "EN→MW",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "Pùk ni gyar tal.",
+  "ref": "Pùk ni gyar tal.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H05",
+  "dir": "EN→MW",
+  "system": "Pure RBMT",
+  "hyp": "Mo nang mun ɓam mo.",
+  "ref": "Mo nang nne mun n’ɓam mo ’e.",
+  "chrf": 38.2424085221834,
+  "bleu": 14.62613413027904,
+  "chrf_ns": 45.887419558029634
+ },
+ {
+  "id": "H05",
+  "dir": "EN→MW",
+  "system": "Zero-Shot LLM",
+  "hyp": "Mo ɗáng nne mun n’cin mo kɨ ɗak.",
+  "ref": "Mo nang nne mun n’ɓam mo ’e.",
+  "chrf": 42.02982274000347,
+  "bleu": 11.99014838091355,
+  "chrf_ns": 46.18166058857561
+ },
+ {
+  "id": "H05",
+  "dir": "EN→MW",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "Mo ɗang katɗang mun n’ɓam mo.",
+  "ref": "Mo nang nne mun n’ɓam mo ’e.",
+  "chrf": 45.95795410521099,
+  "bleu": 24.0785655451027,
+  "chrf_ns": 46.41205697411965
+ },
+ {
+  "id": "H06",
+  "dir": "MW→EN",
+  "system": "Pure RBMT",
+  "hyp": "little house",
+  "ref": "a little house",
+  "chrf": 84.56078299501776,
+  "bleu": 60.653065971263366,
+  "chrf_ns": 84.56078299501776
+ },
+ {
+  "id": "H06",
+  "dir": "MW→EN",
+  "system": "Zero-Shot LLM",
+  "hyp": "The house is new.",
+  "ref": "a little house",
+  "chrf": 29.744657251915363,
+  "bleu": 10.682175159905853,
+  "chrf_ns": 31.46914282993559
+ },
+ {
+  "id": "H06",
+  "dir": "MW→EN",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "A small house.",
+  "ref": "a little house",
+  "chrf": 26.056937958189664,
+  "bleu": 15.97357760615681,
+  "chrf_ns": 30.874827587564056
+ },
+ {
+  "id": "H07",
+  "dir": "MW→EN",
+  "system": "Pure RBMT",
+  "hyp": "I see it",
+  "ref": "I saw it.",
+  "chrf": 18.251475347420524,
+  "bleu": 24.840753130578644,
+  "chrf_ns": 21.666666666666668
+ },
+ {
+  "id": "H07",
+  "dir": "MW→EN",
+  "system": "Zero-Shot LLM",
+  "hyp": "I saw it.",
+  "ref": "I saw it.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H07",
+  "dir": "MW→EN",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "I saw it.",
+  "ref": "I saw it.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H08",
+  "dir": "MW→EN",
+  "system": "Pure RBMT",
+  "hyp": "he hit he hit he hit he",
+  "ref": "He hit him again and again.",
+  "chrf": 13.192220638500649,
+  "bleu": 6.567274736060395,
+  "chrf_ns": 22.695745666639798
+ },
+ {
+  "id": "H08",
+  "dir": "MW→EN",
+  "system": "Zero-Shot LLM",
+  "hyp": "He hit him, hit him, hit him.",
+  "ref": "He hit him again and again.",
+  "chrf": 32.71555387035576,
+  "bleu": 16.784459625186194,
+  "chrf_ns": 34.19406952053863
+ },
+ {
+  "id": "H08",
+  "dir": "MW→EN",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "He hit him again and again.",
+  "ref": "He hit him again and again.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H09",
+  "dir": "MW→EN",
+  "system": "Pure RBMT",
+  "hyp": "I see my body is at/in/to pen water",
+  "ref": "I saw myself in the water.",
+  "chrf": 21.47965887693431,
+  "bleu": 4.456882760699064,
+  "chrf_ns": 23.23572614666504
+ },
+ {
+  "id": "H09",
+  "dir": "MW→EN",
+  "system": "Zero-Shot LLM",
+  "hyp": "I saw a fish in the water.",
+  "ref": "I saw myself in the water.",
+  "chrf": 61.20612143483268,
+  "bleu": 41.11336169005198,
+  "chrf_ns": 58.07984880800674
+ },
+ {
+  "id": "H09",
+  "dir": "MW→EN",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "I saw myself in the water.",
+  "ref": "I saw myself in the water.",
+  "chrf": 100.0,
+  "bleu": 100.00000000000004,
+  "chrf_ns": 100.0
+ },
+ {
+  "id": "H10",
+  "dir": "MW→EN",
+  "system": "Pure RBMT",
+  "hyp": "man ’s work hard",
+  "ref": "A man’s work is hard.",
+  "chrf": 47.694624726862514,
+  "bleu": 11.521590992286539,
+  "chrf_ns": 48.40511291599655
+ },
+ {
+  "id": "H10",
+  "dir": "MW→EN",
+  "system": "Zero-Shot LLM",
+  "hyp": "The work of the man.",
+  "ref": "A man’s work is hard.",
+  "chrf": 18.26045984125042,
+  "bleu": 9.652434877402245,
+  "chrf_ns": 17.55723443223443
+ },
+ {
+  "id": "H10",
+  "dir": "MW→EN",
+  "system": "Hybrid RBMT+LLM",
+  "hyp": "A man's work is hard.",
+  "ref": "A man’s work is hard.",
+  "chrf": 74.5314183365654,
+  "bleu": 53.7284965911771,
+  "chrf_ns": 100.0
+ }
+]
