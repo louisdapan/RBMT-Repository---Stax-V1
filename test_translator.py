@@ -73,7 +73,7 @@ CLOSED_MW2EN = {
     "ri": "he", "ra": "she", "mo": "they", "mun": "we(incl)", "mu": "we(incl)", "mumun": "we(excl)", "ɨn": "I", "an": "I",
     "wan": "I", "gha": "you(m)", "wagha": "you(m)", "yi": "you(f)", "wu": "you(pl)", "ni": "DEF", "mɨni": "that",
     "ɗiisɨ": "this", "ɗiisɨ̀": "this", "nɗiisɨ̀": "this", "nkaa": "PROG", "kɨ": "with/and", "’ì": "PERF", "ba": "NEG",
-    "kas": "NEG.end", "a": "COP/FOC", "nne": "that(COMP)", "ɓe": "then", "ɗí": "REL", "ɗi": "REL", "taji": "don’t",
+    "kas": "NEG.end", "a": "COP/FOC", "nne": "that(COMP)", "ɓe": "then", "ɗí": "REL", "\u0257i": "REL", "taji": "don’t",
     "’e": "Q", "ye": "Q", "we": "who", "me": "what", "nnee": "where", "pɨrang": "when", "góng": "how many",
     "fɨna": "my", "fɨri": "his", "fɨra": "her", "fii": "your(f)", "fwagha": "your(m)", "funu": "our", "furu": "their",
     "mɨna": "mine", "mɨri": "his(indep)", "munu": "ours", "kɨni": "its", "’á": "HAB", "’í": "HAB", "’é": "HAB",
@@ -584,7 +584,7 @@ class EnglishToMw:
         if form is not None and prep in ("on", "in") and objs:
             obj_text = " ".join(c.lower_ for c in objs)
             if any(w in obj_text for w in VEHICLE_NOUNS):
-                form, fused, supp = "n’ɗɨɨn", False, False
+                form, fused, supp = "n\u2019\u0257\u0268\u0268n", False, False
                 self.rule("vehicle container: on/in the <vehicle> -> n’ɗɨɨn", "GOLD",
                           f"{obj_text} -> inside")
         if form is None:
@@ -745,7 +745,7 @@ class EnglishToMw:
                     days_toks += self.np(noun, as_object=True)
             self.rule("temporal ago: puus ɗii-<num> ɗi ni ɗel (elapsed-time relative clause)", "GOLD",
                       "… puus ɗii-<num> ɗi ni ɗel")
-            TEMP = ["puus", "ɗii-" + (days_toks[0] if days_toks else "vul"), "ɗi", "ni", "ɗel"]
+            TEMP = ["puus", "\u0257ii-" + (days_toks[0] if days_toks else "vul"), "\u0257i", "ni", "\u0257el"]
         # ---- assemble.  Mwaghavul is strictly SVO: S + V + O + locative P + temporal P.
         # Never move the main verb after the direct object.
         toks = []
